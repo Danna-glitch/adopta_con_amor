@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopta con Amor - Apoya la Causa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <nav class="main-nav">
+        <div class="logo">
+            <img src="https://image2url.com/images/1760561820378-4dacd090-b93c-4b7f-8b24-f23c7d6cc7a3.png" alt="Logo Adopta con Amor" class="logo-img"> 
+           <strong> Adopta con Amor</strong>
+        </div>
+        <ul>
+            <li><a href="index.html"> Adopción y Inicio</a></li>
+            <li><a href="registro_cliente.html"> Registrar Adoptante</a></li>
+            <li><a href="registro_donacion.html"> Donaciones de Dinero  / Artículos</a></li>
+            <li><a href="tienda.html"> Tienda y Productos</a></li>
+            <li><a href="denuncias.html">Denuncias de Maltrato</a></li>
+            <li><a href="acerca_de.html">Acerca de Nosotros</a></li> </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>🎁 Apoya Nuestra Labor: Donaciones</h2>
+        <p>Tu apoyo, ya sea económico o en especie, es vital para mantener nuestro refugio, proporcionar alimentación, atención veterinaria y un espacio seguro para todos nuestros rescatados.</p>
+        
+        <form action="/api/procesar-donacion-dinero" method="POST" class="form-container">
+            <h3>Donación Monetaria (Ayuda Directa)</h3>
+            <p style="font-style: italic; color: #558B2F;">Cada céntimo se destina a cubrir gastos veterinarios y comida.</p>
+            
+            <fieldset>
+                <legend>Monto y Datos</legend>
+                
+                <label for="monto">Cantidad a Donar (BS):</label>
+                <input type="number" id="monto" name="monto" min="1.00" step="0.01" placeholder="Mínimo 1.00Bs" required>
+                
+                <label for="nombre_donante">Su Nombre (Opcional):</label>
+                <input type="text" id="nombre_donante" name="nombre_donante" placeholder="Anónimo si lo prefiere">
+                
+                <label for="email_donante">Correo Electrónico:</label>
+                <input type="email" id="email_donante" name="email_donante" placeholder="Para recibo o agradecimiento">
+                
+                <label for="metodo_pago">Método de Pago (Simulación de Integración):</label>
+                <select id="metodo_pago" name="metodo_pago" required>
+                    <option value="">Seleccione un método</option>
+                    <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="transferencia">Transferencia Bancaria/QR</option>
+                </select>
+            </fieldset>
+
+            <button type="submit" class="btn-submit">Donar Ahora</button>
+        </form>
+
+        <hr style="margin: 40px auto; border-color: #D7CCC8; width: 80%;">
+
+        <form action="/api/registrar-donacion-articulo" method="POST" class="form-container">
+            <h3>Donación de Artículos Esenciales</h3>
+            <p>Necesitamos constantemente:</p>
+            <ul style="list-style-type: '🐾 '; padding-left: 20px; color: #4E342E;">
+                <li>Alimento seco y húmedo de calidad</li>
+                <li>Medicamentos y material de primeros auxilios</li>
+                <li>Mantitas, toallas y camas</li>
+                <li>Juguetes resistentes y arena para gatos</li>
+            </ul>
+            
+            <fieldset>
+                <legend>Artículos y Contacto</legend>
+                
+                <label for="descripcion_articulo">Detalle lo que desea donar:</label>
+                <textarea id="descripcion_articulo" name="descripcion_articulo" rows="5" placeholder="Ej: 2 bolsas de 10kg de alimento para perro adulto, 10 mantas usadas." required></textarea>
+                
+                <label for="nombre_contacto">Su Nombre:</label>
+                <input type="text" id="nombre_contacto" name="nombre_contacto" required>
+                
+                <label for="telefono_contacto">Teléfono o Correo de Contacto:</label>
+                <input type="text" id="telefono_contacto" name="telefono_contacto" required>
+
+                <label for="acordar_entrega">¿Cómo prefiere coordinar la entrega?</label>
+                <select id="acordar_entrega" name="acordar_entrega" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="recoger">Solicitar que lo recojan</option>
+                    <option value="entregar">Entregar en el refugio</option>
+                </select>
+            </fieldset>
+
+            <button type="submit" class="btn-submit">Coordinar Donación de Artículos</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 <strong>Adopta con Amor</strong> | Un proyecto de protección animal.</p>
+    </footer>
+</body>
+</html>

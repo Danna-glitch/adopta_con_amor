@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopta con Amor - Registrar Adoptante</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <nav class="main-nav">
+        <div class="logo">
+            <img src="https://image2url.com/images/1760561820378-4dacd090-b93c-4b7f-8b24-f23c7d6cc7a3.png" alt="Logo Adopta con Amor" class="logo-img"> 
+            <strong>Adopta con Amor</strong>
+        </div>
+        <ul>
+            <li><a href="index.html"> Adopción y Inicio</a></li>
+            <li><a href="registro_cliente.html"> Registrar Adoptante</a></li>
+            <li><a href="registro_donacion.html"> Donaciones de Dinero / Artículos</a></li>
+            <li><a href="tienda.html">Tienda y Productos</a></li>
+            <li><a href="denuncias.html"> Denuncias de Maltrato</a></li>
+            <li><a href="acerca_de.html"> Acerca de Nosotros</a></li> </ul>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>👤 Formulario de Registro para Adoptantes</h2>
+        <p>Por favor, complete sus datos. Esta información es el primer paso para verificar su idoneidad como adoptante.</p>
+        
+        <form action="/api/registrar-cliente" method="POST" class="form-container">
+            
+            <fieldset>
+                <legend>Datos Personales</legend>
+                
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefono">Teléfono de Contacto:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Detalles de Vivienda</legend>
+                
+                <label for="direccion">Dirección Completa:</label>
+                <input type="text" id="direccion" name="direccion" required>
+
+                <label for="vivienda">Tipo de Vivienda:</label>
+                <select id="vivienda" name="vivienda" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="casa">Casa con Jardín/Patio</option>
+                    <option value="apartamento">Apartamento sin Jardín</option>
+                    <option value="otro">Otro</option>
+                </select>
+                
+                <label for="mascotas_previas">¿Ha tenido mascotas antes?</label>
+                <div style="margin-top: 5px;">
+                    <input type="radio" id="si_mascotas" name="mascotas_previas" value="si" required style="width: auto;">
+                    <label for="si_mascotas" style="display: inline; margin-right: 15px;">Sí</label>
+                    <input type="radio" id="no_mascotas" name="mascotas_previas" value="no" style="width: auto;">
+                    <label for="no_mascotas" style="display: inline;">No</label>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="btn-submit">Registrarse y Postular</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 <strong>Adopta con Amor</strong> | Un proyecto de protección animal.</p>

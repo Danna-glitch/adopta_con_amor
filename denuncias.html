@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopta con Amor - Denuncias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header>
+    <nav class="main-nav">
+        <div class="logo">
+            <img src="https://image2url.com/images/1760561820378-4dacd090-b93c-4b7f-8b24-f23c7d6cc7a3.png" alt="Logo Adopta con Amor" class="logo-img"> 
+            <strong>Adopta con Amor</strong>
+        </div>
+        <ul>
+            <li><a href="index.html"> Adopción y Inicio</a></li>
+            <li><a href="registro_cliente.html"> Registrar Adoptante</a></li>
+            <li><a href="registro_donacion.html"> Donaciones de Dinero / Artículos</a></li>
+            <li><a href="tienda.html"> Tienda y Productos</a></li>
+            <li><a href="denuncias.html"> Denuncias de Maltrato</a></li>
+            <li><a href="acerca_de.html"> Acerca de Nosotros</a></li> </ul>
+    </nav>
+   </header>
+    
+    <main>
+        <h2>🚨 Reporte de Maltrato o Abandono Animal</h2>
+        <p>Toda la información proporcionada será tratada con la máxima confidencialidad. Su reporte es crucial para la protección animal.</p>
+        
+        <form action="/api/registrar-denuncia" method="POST" class="form-container">
+            
+            <fieldset>
+                <legend>Detalles del Incidente</legend>
+                
+                <label for="ubicacion">Dirección o Lugar del Incidente:</label>
+                <input type="text" id="ubicacion" name="ubicacion" placeholder="Ej: Calle 5 # 20A, cerca del parque" required>
+                
+                <label for="tipo_maltrato">Tipo de Incidente:</label>
+                <select id="tipo_maltrato" name="tipo_maltrato" required>
+                    <option value="">Seleccione el tipo</option>
+                    <option value="abandono">Abandono</option>
+                    <option value="maltrato_fisico">Maltrato Físico / Lesiones</option>
+                    <option value="negligencia">Negligencia (Falta de alimento/agua)</option>
+                    <option value="otro">Otro</option>
+                </select>
+
+                <label for="descripcion_incidente">Descripción Detallada del Incidente:</label>
+                <textarea id="descripcion_incidente" name="descripcion_incidente" rows="7" placeholder="Describa el animal, la hora y la frecuencia del maltrato. Sea lo más detallado posible." required></textarea>
+                
+            </fieldset>
+
+            <fieldset>
+                <legend>Información de Contacto (Opcional)</legend>
+                <p style="font-size: 0.9em; color: #666;">Si desea que lo contactemos para seguimiento, ingrese sus datos. Puede dejar los campos vacíos para mantener el anonimato.</p>
+                
+                <label for="nombre_denunciante">Su Nombre:</label>
+                <input type="text" id="nombre_denunciante" name="nombre_denunciante">
+                
+                <label for="tel_denunciante">Su Teléfono o Correo:</label>
+                <input type="text" id="tel_denunciante" name="tel_denunciante">
+            </fieldset>
+
+            <button type="submit" class="btn-submit btn-alerta">Enviar Denuncia</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 <strong>Adopta con Amor</strong> | Un proyecto de protección animal.</p>
+    </footer>
+</body>
+</html>
