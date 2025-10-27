@@ -262,3 +262,10 @@ textarea {
     font-weight: bold;
     margin: 5px 0 10px 0;
 }
+
+/* Estilo opcional para cartas emparejadas */
+.card-container.matched .card-front {
+    /* Un color ligeramente diferente para indicar que ya fueron encontradas */
+    background-color: #ECEFF1; 
+    border-color: #A1887F; 
+}
