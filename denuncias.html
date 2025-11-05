@@ -124,6 +124,14 @@
         .btn-limpiar:hover {
             background-color: #000;
         }
+        /* AJUSTE DEL TAMAÑO DEL LOGO */
+        .logo-img {
+            width: 100px; /* Tamaño del logo AUMENTADO */
+            height: 100px; /* Tamaño del logo AUMENTADO */
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+    </style>
     </style>
 </head>
 <body>
@@ -146,7 +154,7 @@
     </header>
     
     <main>
-        <h2 style="text-align: center;">🚨 Denuncias de Maltrato Animal</h2>
+        <h2 style="text-align: center;"> Denuncias de Maltrato Animal</h2>
         <p style="text-align: center; color: #d32f2f; font-weight: bold;">¡Tu reporte es confidencial y vital! Actuaremos lo más pronto posible.</p>
 
         <div class="form-container">
@@ -254,9 +262,9 @@
                     infoDiv.className = 'denuncia-info';
                     infoDiv.innerHTML = `
                         <span class="denuncia-tipo">[${d.tipo_maltrato}]</span>
-                        **Lugar:** ${d.direccion_incidente}
-                        <p style="margin: 5px 0 0; color: #333;">**Detalle:** ${d.descripcion.substring(0, 100)}...</p>
-                        <span class="denuncia-time">📅 **Fecha:** ${fecha} | ⏰ **Hora de Registro:** ${hora}</span>
+                        <strong>Lugar:</strong> ${d.direccion_incidente}
+                        <p style="margin: 5px 0 0; color: #333;"><strong>Detalle:</strong> ${d.descripcion.substring(0, 100)}...</p>
+                        <span class="denuncia-time">📅 <strong>Fecha:</strong>${fecha} | ⏰ <strong>Hora de Registro:</strong> ${hora}</span>
                         ${d.contacto_denunciante ? `<span class="denuncia-time">Contacto: ${d.contacto_denunciante}</span>` : ''}
                     `;
 

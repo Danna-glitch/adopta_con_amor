@@ -269,3 +269,10 @@ textarea {
     background-color: #ECEFF1; 
     border-color: #A1887F; 
 }
+/* AJUSTE DEL TAMAÑO DEL LOGO (Tus estilos solicitados) */
+        .logo-img {
+            width: 100px; /* Tamaño del logo AUMENTADO */
+            height: 100px; /* Tamaño del logo AUMENTADO */
+            vertical-align: middle;
+            margin-right: 10px;
+        }

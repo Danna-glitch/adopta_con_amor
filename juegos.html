@@ -1,3 +1,14 @@
+¡Entendido\! Procedo a aplicar el tamaño de logo grande ($100\text{px}$) al archivo `juegos.html`.
+
+Aquí tienes el código completo y modificado del archivo `juegos.html`.
+
+-----
+
+## 🎲 Código Final: `juegos.html` (Logo Ajustado a $100\text{px}$)
+
+**Instrucción:** Reemplaza el contenido de tu archivo `juegos.html` con el siguiente código:
+
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -152,6 +163,15 @@
             border: 3px solid var(--color-secundario); transform: rotateY(180deg);
         }
         .card-container.matched .card-front { border-color: #4CAF50; opacity: 0.8; }
+
+        /* AJUSTE DEL TAMAÑO DEL LOGO */
+        .logo-img {
+            width: 100px; /* Tamaño del logo AUMENTADO */
+            height: 100px; /* Tamaño del logo AUMENTADO */
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
     </style>
 </head>
 <body>
@@ -164,7 +184,7 @@
         <ul>
                 <li><a href="index.html"> Adopción y Inicio</a></li>
                 <li><a href="registro_cliente.html"> Registrar Adoptante</a></li>
-                <li><a href="registro_donacion.html"> Donaciones de Dinero  / Artículos</a></li>
+                <li><a href="registro_donacion.html"> Donaciones de Dinero / Artículos</a></li>
                 <li><a href="tienda.html"> Tienda y Productos</a></li>
                 <li><a href="juegos.html"> Jueguitos</a></li>
                 <li><a href="denuncias.html"> Denuncias de Maltrato</a></li>
@@ -236,14 +256,14 @@
                     <div class="cuestionario-feedback" id="feedbackE"></div>
                 </div>
                 
-                 <div class="pregunta" id="qF">
+                <div class="pregunta" id="qF">
                     <h3>6. ¿Verdadero o Falso? La adopción responsable incluye la verificación de antecedentes del adoptante.</h3>
                     <label class="cuestionario-opcion" onclick="revisarCuestionario('qF', 'Verdadero')">Verdadero</label>
                     <label class="cuestionario-opcion" onclick="revisarCuestionario('qF', 'Falso')">Falso</label>
                     <div class="cuestionario-feedback" id="feedbackF"></div>
                 </div>
                 
-                 <div class="pregunta" id="qG">
+                <div class="pregunta" id="qG">
                     <h3>7. ¿Verdadero o Falso? El golpe de calor en mascotas solo ocurre en verano.</h3>
                     <label class="cuestionario-opcion" onclick="revisarCuestionario('qG', 'Falso')">Falso</label>
                     <label class="cuestionario-opcion" onclick="revisarCuestionario('qG', 'Verdadero')">Verdadero</label>

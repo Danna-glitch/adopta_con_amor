@@ -6,6 +6,24 @@
     <title>Adopta con Amor - Registro de Donación</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* AJUSTE DEL TAMAÑO DEL LOGO */
+        .logo-img {
+            width: 100px; /* Tamaño del logo AUMENTADO */
+            height: 100px; /* Tamaño del logo AUMENTADO */
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        /* Ajustar la altura del header para que el logo quepa bien */
+        header {
+            padding: 10px 0; 
+        }
+
+        /* Opcional: Aumentar el texto al lado del logo */
+        .main-nav .logo strong {
+            font-size: 1.5em; 
+        }
+
         /* Estilos específicos para el formulario de donación y el historial */
         .form-container, .qr-container, .historial-container {
             max-width: 700px;
@@ -163,11 +181,11 @@
     
     <main>
         <h2 style="text-align: center;"> Registro de Donaciones y Métodos de Pago</h2>
-        <p style="text-align: center;">Tu apoyo financiero o material es vital para el rescate y cuidado de nuestros animales.</p>
+        <p style="text-align: center;"><strong> Tu apoyo financiero o material es vital para el rescate y cuidado de nuestros animales.</strong> </p>
         
         <div class="qr-container" id="qr-section">
             <h3>Pagar Donación Rápida por Código QR</h3>
-            <p style="text-align: center;">Escanea el siguiente código para realizar una transferencia directa. Una vez pagado, por favor, **registra la donación abajo**.</p>
+            <p style="text-align: center;">Escanea el siguiente código para realizar una transferencia directa. Una vez pagado, por favor, <strong> registra la donación abajo</strong> .</p>
             
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1200px-QR_code_for_mobile_English_Wikipedia.svg.png" 
                  alt="Código QR para pago de donación" 
@@ -178,7 +196,7 @@
 
 
         <div class="form-container">
-            <h3>Registrar Nueva Donación (Local)</h3>
+            <h3>Registrar Nueva Donación</h3>
             <p>Por favor, registra tu donación <strong>después de haber realizado el pago o la entrega</strong> para mantener un seguimiento. La fecha y hora se registrarán automáticamente.</p>
 
             <form id="donation-form">
@@ -248,6 +266,7 @@
                     document.getElementById('articulo').removeAttribute('required');
                 } else if (selectedValue === 'Articulo') {
                     montoGroup.style.display = 'none';
+                    montoGroup.style.display = 'none';
                     articuloGroup.style.display = 'block';
                     document.getElementById('articulo').setAttribute('required', 'required');
                     document.getElementById('monto').removeAttribute('required');
@@ -311,8 +330,8 @@
                     let tipoTexto = '';
 
                     if (dona.tipo_donacion.startsWith('Dinero')) {
-                         tipoTexto = dona.tipo_donacion === 'Dinero_QR' ? 'Dinero (QR)' : 'Dinero (Otros)';
-                         detalle = `Monto: ${dona.monto}`;
+                        tipoTexto = dona.tipo_donacion === 'Dinero_QR' ? 'Dinero (QR)' : 'Dinero (Otros)';
+                        detalle = `Monto: ${dona.monto}`;
                     } else {
                         tipoTexto = 'Artículo';
                         detalle = `Artículo: ${dona.articulo}`;
